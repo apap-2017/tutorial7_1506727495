@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:replace="fragments/fragment :: title"></title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+	<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+	<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
+
+	<h3>Kuliah yang diambil</h3>
+	<ul th:each="course,iterationStatus: ${student.courses}">
+		<h5><li th:text="${course.name} + '-' + ${course.credits} + ' sks'">
+			Nama kuliah-X SKS</li></h5>
+	</ul>
+</body>
+</html>
+
