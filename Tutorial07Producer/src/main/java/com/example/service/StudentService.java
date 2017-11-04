@@ -20,6 +20,6 @@ public interface StudentService
     
     
     void updateStudent (StudentModel student);
-    
-    CourseModel selectCourse (String id_course);
+//    
+//    CourseModel selectCourse (String id_course);
 }

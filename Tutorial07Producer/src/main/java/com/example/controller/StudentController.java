@@ -126,18 +126,18 @@ public class StudentController
         return "success-update";
     }
     
-    @RequestMapping("/course/view/{id_course}")
-    public String viewCoursePath (Model model,
-            @PathVariable(value = "id_course") String id_course)
-    {
-        CourseModel course = studentDAO.selectCourse(id_course);
-
-        if (course != null) {
-            model.addAttribute ("course", course);
-            return "viewcourse";
-        } else {
-        	model.addAttribute ("id_course", id_course);
-            return "not-found-course";
-        }
-    }
+//    @RequestMapping("/course/view/{id_course}")
+//    public String viewCoursePath (Model model,
+//            @PathVariable(value = "id_course") String id_course)
+//    {
+//        CourseModel course = studentDAO.selectCourse(id_course);
+//
+//        if (course != null) {
+//            model.addAttribute ("course", course);
+//            return "viewcourse";
+//        } else {
+//        	model.addAttribute ("id_course", id_course);
+//            return "not-found-course";
+//        }
+//    }
 }
